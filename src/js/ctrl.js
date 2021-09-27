@@ -1,18 +1,25 @@
 /*$(document).ready(function() {
-$('a').click(function() {
-if ($(this).hasClass("same-box")) {
-    $(".toggle:visible").slideToggle.not;
-    $(".toggle:visible").slideUp();
-    $($(this).attr("href")).slideDown();
-    return false;
-}
-var myelement = $(this).attr("href");
-$(myelement).slideToggle("fast");
-$(".toggle:visible").not(myelement).slideUp();
+    $('a').click(function() {
+        if ($(this).hasClass("same-box")) {
+            $(".toggle:visible").slideToggle.not;
+            $(".toggle:visible").slideUp();
+            $($(this).attr("href")).slideDown();
+            return false;
+        }
+        var myelement = $(this).attr("href");
+        $(myelement).slideToggle("fast");
+        $(".toggle:visible").not(myelement).slideUp();
 
 
-});
+    });
 });*/
+function loadBox() {
+    document.getElementById('box1').style.display = 'none';
+    document.getElementById('box2').style.display = 'none';
+    document.getElementById('box3').style.display = 'none';
+    document.getElementById('box4').style.display = 'none';
+    document.getElementById('box5').style.display = 'none';
+}
 
 function box1() {
     document.getElementById('box2').style.display = 'none';
