@@ -10,4 +10,4 @@
  <br />
  <sub><b>Welington Fernandes</b></sub></a> <a href="https://github.com/CodWF/Profile" title="CodWF">🚀</a>
 
-Feito com ❤️ por Welington Fernandes 👋🏽 Entre em contato!
+Feito com ❤️ por Welington Fernandes 👋🏽
