@@ -1,5 +1,5 @@
 <h4 align="center"> 
-	🚧  🚀 Em construção...  🚧
+🚧🚀 Em construção...🚧
 </h4>
 <div align="center">
 🚀 Autor
