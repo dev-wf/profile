@@ -24,14 +24,3 @@
     display: none;
 }
 
-.anim {
-    transition: all 0.5s ease-in;
-}
-
-.anim:hover {
-    outline: 10px solid;
-    color: rgba(0, 83, 161, 0.678);
-    outline-color: rgba(253, 0, 0, 0);
-    outline-offset: 10px;
-    color: black;
-}
