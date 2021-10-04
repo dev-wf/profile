@@ -40,71 +40,27 @@
 
     <!-- MAIN BODY -->
     <main>
-        <div>
-
-            <div id="mod2" class="px-2  py-5 bg-white  mx-auto text-center">
-                <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0">
-                        <img src="/src/img/wf_black.png" height="100" alt="">
-                    </div>
-                    <div class="flex-grow-0 ms-3">
-                        <h3>Recibo Simples</h3>
-                    </div>
-                </div>
-                <!-- -->
-                <form class="row gy-2 gx-3 align-items-center">
-                    <div class="col-sm-auto col-sm-5">
-                        <p class="fw-lighter fs-4">Welington Fernandes</p>
-                        <p class="fw-lighter fs-6">CNPJ: 00.000.000/0001-00</p>
-                    </div>
-                    <div class="col-sm-auto col-4">
-                        <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
-                        <div class="input-group">
-                            <div class="input-group-text ">Valor R$:</div>
-                            <input type="text" class="form-control " id="autoSizingInputGroup" placeholder="00,00">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-auto col-9">
-                        <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
-                        <div class="input-group">
-                            <div class="input-group-text">Nome Pagador:</div>
-                            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="WF TECH">
-                        </div>
-                    </div>
-                    <div class="col-sm-auto col-5 ">
-                        <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
-                        <div class="input-group">
-                            <div class="input-group-text">CPF/CNPJ:</div>
-                            <input type="text" class="form-control" id="autoSizingInputGroup"
-                                placeholder="000.000.000-00">
-                        </div>
-
-                    </div>
-                    <div class="col-sm-auto col-4 ">
-                        <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
-                        <div class="input-group">
-                            <div class="input-group-text">Data:</div>
-                            <input type="date" class="form-control" id="autoSizingInputGroup"
-                                placeholder="000.000.000-00">
-                        </div>
-                    </div>
-                    <div class="col-sm-auto col-sm-8">
-                        <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
-                        <div class="input-group">
-                            <div class="input-group-text">Referente à:</div>
-                            <input type="text" class="form-control" id="autoSizingInputGroup"
-                                placeholder="DESCRIÇÃO DE PAGAMENTO">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-auto col-sm-6">'
-                        <p>assinatura:______________________________________________________</p>
-                    </div>
-                </form>
+        <br>
+        <div id="mod2" class="px-2 w-50 h-25  bg-white  mx-auto text-center">
+            <div class="">
                 <br>
+                <img src="/src/img/wf_black_recibo.png" width="80" alt="">
+                <h5>Recibo Simples</h5>
+                <!-- RECIBO BODY -->
+                <form>
+                    <input class="form-control form-control-sm" type="text" placeholder="Valor:"
+                        aria-label=".form-control-sm example">
+                </form>
 
-                <!-- -->
+
+
+
+
+
+
+                <!-- FIM RECIBO BODY -->
+                <br>
+                <br>
                 <a id="btnh" onclick="hide();printStatus()" class="btn-outline-info text-dark btn-lg btn ">
                     <span></span>
                     <span></span>
@@ -112,7 +68,10 @@
                     <span></span>
                     IMPRIMIR
                 </a>
+                <br>
+                <br>
             </div>
+
         </div>
 
     </main>
