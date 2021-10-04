@@ -5,13 +5,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="imagex/png" href="../src/img/recibo.png">
+    <link rel="shortcut icon" type="imagex/png" href="/src/img/recibo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Welington Alves Fernandes">
     <meta name="generator" content="">
     <link href="../css/wf.css" rel="stylesheet">
-    
+
+
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,9 +21,9 @@
     <title>Emissor de recibos</title>
 </head>
 
-<body class="bg-dark font-monospace ">
+<body id="bd" class=" bg-dark font-monospace ">
     <!-- HEADER-->
-    <nav class="navbar  border-bottom border-info navbar-dark bg-dark">
+    <nav id="navmenu" class="navbar  border-bottom border-info navbar-dark bg-dark">
         <div class="container fw-bold justify-content-center">
             <a class="neon-bt" href="../../index.html">
                 <span></span>
@@ -38,19 +39,89 @@
     <!-- FIM HEADER-->
 
     <!-- MAIN BODY -->
-    <main class=" text-white bg-dark ">
-        <div id="recibo" class="px-2  py-5 bg-dark border-top  border-bottom border-info mx-auto text-center  ">
-            <br>
-            <br>
+    <main>
+        <div>
 
+            <div id="mod2" class="px-2  py-5 bg-white  mx-auto text-center">
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                        <img src="/src/img/wf_black.png" height="100" alt="...">
+                    </div>
+                    <div class="flex-grow-0 ms-3">
+                        <h3>Recibo Simples</h3>
+                    </div>
+                </div>
+                <!-- -->
+                <form class="row gy-2 gx-3 align-items-center">
+                    <div class="col-sm-auto col-sm-5">
+                        <p class="fw-lighter fs-4">Welington Fernandes</p>
+                        <p class="fw-lighter fs-6">CNPJ: 00.000.000/0001-00</p>
+                    </div>
+                    <div class="col-sm-auto col-4">
+                        <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-text ">Valor R$:</div>
+                            <input type="text" class="form-control " id="autoSizingInputGroup" placeholder="00,00">
+                        </div>
+                    </div>
 
-            <br>
-            <br>
+                    <div class="col-sm-auto col-9">
+                        <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-text">Nome Pagador:</div>
+                            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="WF TECH">
+                        </div>
+                    </div>
+                    <div class="col-sm-auto col-5 ">
+                        <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-text">CPF/CNPJ:</div>
+                            <input type="text" class="form-control" id="autoSizingInputGroup"
+                                placeholder="000.000.000-00">
+                        </div>
+
+                    </div>
+                    <div class="col-sm-auto col-4 ">
+                        <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-text">Data:</div>
+                            <input type="date" class="form-control" id="autoSizingInputGroup"
+                                placeholder="000.000.000-00">
+                        </div>
+                    </div>
+                    <div class="col-sm-auto col-sm-8">
+                        <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-text">Referente à:</div>
+                            <input type="text" class="form-control" id="autoSizingInputGroup"
+                                placeholder="DESCRIÇÃO DE PAGAMENTO">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-auto col-sm-6">'
+                        <p>assinatura:______________________________________________________</p>
+                    </div>
+                </form>
+                <br>
+
+                <!-- -->
+                <a id="btnh" onclick="hide();printStatus()" class="btn-outline-info text-dark btn-lg btn ">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    IMPRIMIR
+                </a>
+            </div>
+        </div>
+
     </main>
     <!-- FIM MAIN BODY -->
 
-    <!-- Optional JavaScript; choose one of the two! -->
 
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="../js/print.js"></script>
+    <script src="../js/recibo.simples.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
