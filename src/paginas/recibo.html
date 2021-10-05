@@ -41,27 +41,55 @@
     <!-- MAIN BODY -->
     <main>
         <br>
-        <div id="mod2" class="px-2 w-50 h-25  bg-white  mx-auto text-center">
-            <div class="">
-                <br>
-                <img src="/src/img/wf_black_recibo.png" width="80" alt="">
-                <h5>Recibo Simples</h5>
-                <!-- RECIBO BODY -->
-                <form>
-                    <input class="form-control form-control-sm" type="text" placeholder="Valor:"
-                        aria-label=".form-control-sm example">
-                </form>
+        <div id="mod2" class="px-2 w-50 h-50  bg-white  mx-auto text-center">
+            <div id="" class="">
+                <div id="areadeimpresao" media="print">
+                    <br>
+                    <img src="/src/img/wf_black_recibo.png" width="80" alt="">
+                    <h5>Recibo Simples</h5>
+                    <!-- RECIBO BODY -->
+                    <div class="position-relative" id="reciboBody">
+                        <div class="">
+                            <span id="res" class="fs-6 fw-light">Nome:</span><input class="col-5 input-group-sm "
+                                name="nome" placeholder="Nome" id="nome" type="text" maxlength="100">
+                            <span id="res" class="fs-6 fw-light">CPF/CNPJ:</span><input class="col-3 input-group-sm "
+                                name="cpf" placeholder="CPF/CNPJ" id="cpf" type="text" maxlength="100">
+                        </div>
+                        <br>
+                        <br>
+                        <div class="position-absolute  end-0 ">
+                            <span id="res" class="fs-6 fw-light">R$:</span><input class="col-5 input-group-sm "
+                                name="valor" placeholder="Valor" id="valor" onkeyup="real(this);" type="text"
+                                name="quantidade" maxlength="9">
+                        </div>
+                        <br>
+                        <br>
+
+                        <br>
+                        <div class="">
+                            <span id="res" class="fs-6 fw-light">RECEBI DE:</span><input class="col-4  input-group-sm "
+                                name="nome" placeholder="Nome" id="nome" type="text" maxlength="100">
+                            <span id="res" class="fs-6 fw-light">Sob o CPF/CNPJ:</span><input
+                                class="col-3 input-group-sm " name="cpf" placeholder="CPF/CNPJ" id="cpf" type="text"
+                                maxlength="100">
+                        </div>
+                        <br>
+                        <br>
+                        <div class="">
+                            <span id="res" class="fs-6 fw-light">Referente á:</span><input class="col-9 input-group-sm "
+                                name="ref" placeholder="Descrição de pagamento" id="ref" type="text" maxlength="100">
+                        </div>
 
 
 
+                    </div>
 
-
-
+                </div>
 
                 <!-- FIM RECIBO BODY -->
                 <br>
                 <br>
-                <a id="btnh" onclick="hide();printStatus()" class="btn-outline-info text-dark btn-lg btn ">
+                <a id="btnh" onclick="printStatus('areadeimpresao')" class="btn-outline-info text-dark btn-lg btn ">
                     <span></span>
                     <span></span>
                     <span></span>
