@@ -11,12 +11,13 @@
     <meta name="author" content="Welington Alves Fernandes">
     <meta name="generator" content="">
     <link href="../css/wf.css" rel="stylesheet">
-
+    <link href="../css/recibo.css" rel="stylesheet">
 
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 
     <title>Emissor de recibos</title>
 </head>
@@ -39,77 +40,131 @@
     <!-- FIM HEADER-->
 
     <!-- MAIN BODY -->
-    <main>
-        <br>
-        <div id="mod2" class="px-2 w-50 h-50  bg-white  mx-auto text-center">
-            <div id="" class="">
-                <div id="areadeimpresao" media="print">
-                    <br>
-                    <img src="../img/wf_black_recibo.png" width="80" alt="">
-                    <h5>Recibo Simples</h5>
-                    <!-- RECIBO BODY -->
-                    <div class="position-relative" id="reciboBody">
-                        <div class="">
-                            <span id="res" class="fs-6 fw-light">Nome:</span><input class="col-5 input-group-sm "
-                                name="nome" placeholder="Nome" id="nome" type="text" maxlength="100">
-                            <span id="res" class="fs-6 fw-light">CPF/CNPJ:</span><input class="col-3 input-group-sm "
-                                name="cpf" placeholder="CPF/CNPJ" id="cpf" type="text" maxlength="100">
+    <div id="app">
+        <section class="section p-b-0">
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <div class="box ">
+                            <div id="PrintArea">
+                                <img class="img-thumbnail" src="../img/wf_black_recibo.png" width="100" alt="">
+                                <h1 class="title">Recibo Simples</h1>
+                                <form action="#" method="dialog">
+                                    <div class="field">
+                                        <div class="columns">
+                                            <div class="column is-3">
+                                                <label for="valor" class="label">Valor:</label>
+                                                <div class="control">
+                                                    <input class="input" onkeyup="real(this);" name="valor"
+                                                        autofocus="autofocus" required type="text" id="valor"
+                                                        placeholder="00,00">
+                                                </div>
+                                                <p class="help">Valor recebido</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="columns">
+                                            <div class="column">
+                                                <label for="pagador" class="label">Nome do Pagador:</label>
+                                                <div class="control">
+                                                    <input class="input" name="pagador" required id="pagador"
+                                                        placeholder="Joaozinho" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="column is-4">
+
+                                                <label for="cpfcnpj" class="label">CPF ou CNPJ
+                                                    (opcional):</label>
+                                                <div class="control">
+                                                    <input class="input " onkeyup='mascaraMutuario(this,cpfCnpj)'
+                                                        name="cpfcnpj" placeholder="00.000.000/0001-00" id="cpfcnpj"
+                                                        type="text">
+                                                </div>
+                                                <p class="help">Somente números</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label for="referente" class="label">Referente à:</label>
+                                        <div class="control">
+                                            <input class="input" placeholder="Descrição do pagamento" name="referente"
+                                                required id="referente" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+
+                                    </div>
+                                    <div class="field">
+                                        <div class="columns">
+                                            <div class="column">
+                                                <label for="emissor" class="label">Nome do Emissor:</label>
+                                                <div class="control">
+                                                    <input class="input" name="emissor" required id="emissor"
+                                                        placeholder="Welington Fernandes" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="column is-4">
+                                                <label for="cpfcnpjE" class="label">CPF ou CNPJ
+                                                    (opcional):</label>
+                                                <div class="control">
+                                                    <input class="input " name="cpfcnpj1"
+                                                        placeholder="00.000.000/0001-00" id="cpfcnpj1" type="text">
+                                                </div>
+                                                <p class="help">Somente números</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="columns">
+                                            <div class="column is-3">
+                                                <label for="datapagamento" class="label">Data:</label>
+                                                <div class="control">
+                                                    <input class="input inputDate" name="datapagamento" required
+                                                        id="datapagamento" type="text" value="05/10/2021">
+                                                </div>
+                                            </div>
+                                        </div>
+                                </form>
+                            </div>
                         </div>
                         <br>
-                        <br>
-                        <div class="position-absolute  end-0 ">
-                            <span id="res" class="fs-6 fw-light">R$:</span><input class="col-5 input-group-sm "
-                                name="valor" placeholder="Valor" id="valor" onkeyup="real(this);" type="text"
-                                name="quantidade" maxlength="9">
+
+                        <div id="btnPrint" onclick="printDoc('PrintArea')"
+                            class="container  text-center fw-bold justify-content-center">
+                            <a class="neon-bt shadow-lg btn-outline-info text-dark">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                IMPRIMIR
+                            </a>
+
                         </div>
-                        <br>
-                        <br>
-
-                        <br>
-                        <div class="">
-                            <span id="res" class="fs-6 fw-light">RECEBI DE:</span><input class="col-4  input-group-sm "
-                                name="nome" placeholder="Nome" id="nome" type="text" maxlength="100">
-                            <span id="res" class="fs-6 fw-light">Sob o CPF/CNPJ:</span><input
-                                class="col-3 input-group-sm " name="cpf" placeholder="CPF/CNPJ" id="cpf" type="text"
-                                maxlength="100">
-                        </div>
-                        <br>
-                        <br>
-                        <div class="">
-                            <span id="res" class="fs-6 fw-light">Referente á:</span><input class="col-9 input-group-sm "
-                                name="ref" placeholder="Descrição de pagamento" id="ref" type="text" maxlength="100">
-                        </div>
-
-
-
                     </div>
-
                 </div>
-
-                <!-- FIM RECIBO BODY -->
-                <br>
-                <br>
-                <a id="btnh" onclick="printStatus('areadeimpresao')" class="btn-outline-info text-dark btn-lg btn ">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    IMPRIMIR
-                </a>
-                <br>
-                <br>
             </div>
+        </section>
 
-        </div>
+    </div>
 
-    </main>
+    <br>
+
+
+
+
+
     <!-- FIM MAIN BODY -->
 
 
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="../js/print.js"></script>
-    <script src="../js/recibo.simples.js"></script>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!--Option 1: Bootstrap Bundle with Popper-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
