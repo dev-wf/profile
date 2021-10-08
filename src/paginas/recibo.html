@@ -78,7 +78,7 @@
                                                 <label for="cpfcnpj" class="label">CPF ou CNPJ
                                                     (opcional):</label>
                                                 <div class="control">
-                                                    <input class="input " onkeyup='mascaraMutuario(this,cpfCnpj)'
+                                                    <input class="input " onkeypress='mascaraMutuario(this,cpfCnpj)'
                                                         name="cpfcnpj" placeholder="00.000.000/0001-00" id="cpfcnpj"
                                                         type="text">
                                                 </div>
@@ -104,10 +104,10 @@
                                                 </div>
                                             </div>
                                             <div class="column is-4">
-                                                <label for="cpfcnpj1" class="label">CPF ou CNPJ
+                                                <label for="cpfcnpj1"  class="label">CPF ou CNPJ
                                                     (opcional):</label>
                                                 <div class="control">
-                                                    <input class="input " name="cpfcnpj1"
+                                                    <input class="input " onkeypress='mascaraMutuario(this,cpfCnpj)' name="cpfcnpj1"
                                                         placeholder="00.000.000/0001-00" id="cpfcnpj1" type="text">
                                                 </div>
                                                 <p class="help">Somente números</p>
@@ -151,13 +151,55 @@
                 <div class="columns">
                     <div class="column has-text-centered">
                         <h1 class="title is-size-5 has-text-centered">Recibo de Pagamento</h1>
-                        <span>VALOR:</span><div id="getValor">getValor</div>
-                        <span>PAGADOR:</span><div id="getPagador">getPagador</div>
-                        <span>DOC PAGADOR:</span><div id="getDocPagador">getDocPagador</div>
-                        <span>REFERENTE:</span><div id="getRef">getRef</div>
-                        <span>EMISSOR:</span><div id="getEmissor">getEmissor</div>
-                        <span>DOC EMISSOR:</span><div id="getValorDocEmissor">getValorDocEmissor</div>
-                        <span>DATA:</span><div id="getData">getData</div>
+
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-left"><b class=""></b></div>
+                    <div class="column has-text-right"><span>R$:</span> <b class="borda-preco" id="getValor">00,000</b>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column recibo-p">
+                        <p>Recebi(emos) de <b id="getPagador">PAGADOR</b> - CPF/CNPJ nº <b
+                                id="getDocPagador">00.0000.000-000</b>, referente à <b id="getRef">REFERENTE</b>.</p>
+                        <p>Para maior clareza firmo(amos) o presente recibo para que produza os seus efeitos, dando
+                            plena, rasa e irrevogável quitação, pelo valor recebido.</p>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <p class="has-text-right" id="getData">DATA</p>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-centered">
+                        <span class="borda-assinatura">
+                            <p id="getEmissor">EMISSOR</p>
+                        </span>
+                        <p  id="getValorDocEmissor">000.000.00.0./00</p>
+                        <p></p>
+
+
+
+
+
+                        <!-- VARIAVEIS
+                        <span>VALOR:</span>
+                        <div id="getValor">getValor</div>
+                        <span>PAGADOR:</span>
+                        <div id="getPagador">getPagador</div>
+                        <span>DOC PAGADOR:</span>
+                        <div id="getDocPagador">getDocPagador</div>
+                        <span>REFERENTE:</span>
+                        <div id="getRef">getRef</div>
+                        <span>EMISSOR:</span>
+                        <div id="getEmissor">getEmissor</div>
+                        <span>DOC EMISSOR:</span>
+                        <div id="getValorDocEmissor">getValorDocEmissor</div>
+                        <span>DATA:</span>
+                        <div id="getData">getData</div>
+                         -->    
                     </div>
                 </div>
             </div>
