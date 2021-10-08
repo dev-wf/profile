@@ -2767,19 +2767,19 @@ a.box:active {
 }
 
 .input::-moz-placeholder, .textarea::-moz-placeholder {
-    color: rgb(0, 0, 0)
+    color: rgb(155, 155, 155)
 }
 
 .input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
-    color: rgb(0, 0, 0)
+    color: rgb(155, 155, 155)
 }
 
 .input:-moz-placeholder, .textarea:-moz-placeholder {
-    color: rgb(0, 0, 0)
+    color: rgb(155, 155, 155)
 }
 
 .input:-ms-input-placeholder, .textarea:-ms-input-placeholder {
-    color: rgb(0, 0, 0)
+    color: rgb(155, 155, 155)
 }
 
 .input:hover, .input.is-hovered, .textarea:hover, .textarea.is-hovered {

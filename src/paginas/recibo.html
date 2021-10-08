@@ -14,6 +14,7 @@
     <link href="../css/recibo.css" rel="stylesheet">
 
 
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -46,7 +47,7 @@
                 <div class="columns">
                     <div class="column">
                         <div class="box ">
-                            <div id="PrintArea">
+                            <div>
                                 <img class="img-thumbnail" src="../img/wf_black_recibo.png" width="100" alt="">
                                 <h1 class="title">Recibo Simples</h1>
                                 <form action="#" method="dialog">
@@ -94,9 +95,6 @@
                                     </div>
 
                                     <div class="field">
-
-                                    </div>
-                                    <div class="field">
                                         <div class="columns">
                                             <div class="column">
                                                 <label for="emissor" class="label">Nome do Emissor:</label>
@@ -106,7 +104,7 @@
                                                 </div>
                                             </div>
                                             <div class="column is-4">
-                                                <label for="cpfcnpjE" class="label">CPF ou CNPJ
+                                                <label for="cpfcnpj1" class="label">CPF ou CNPJ
                                                     (opcional):</label>
                                                 <div class="control">
                                                     <input class="input " name="cpfcnpj1"
@@ -119,10 +117,10 @@
                                     <div class="field">
                                         <div class="columns">
                                             <div class="column is-3">
-                                                <label for="datapagamento" class="label">Data:</label>
-                                                <div class="control">
-                                                    <input class="input inputDate" name="datapagamento" required
-                                                        id="datapagamento" type="text" value="05/10/2021">
+                                                <label for="data" class="label">Data:</label>
+                                                <div class="control ">
+                                                    <input class="input " type="date" name="data" required id="data"
+                                                        placeholder="" type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -130,16 +128,15 @@
                             </div>
                         </div>
                         <br>
-
-                        <div id="btnPrint" onclick="printDoc('PrintArea')"
-                            class="container  text-center fw-bold justify-content-center">
-                            <a class="neon-bt shadow-lg btn-outline-info text-dark">
+                        <div id="btnPrint" class="container  text-center fw-bold justify-content-center">
+                            <a class="neon-bt  shadow-lg btn-secondary text-black">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                                 <span></span>
-                                IMPRIMIR
+                                GERAR RECIBO
                             </a>
+                            <br>
 
                         </div>
                     </div>
@@ -147,9 +144,23 @@
             </div>
         </section>
 
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 
-    <br>
+
 
 
 
@@ -159,8 +170,8 @@
 
 
     <!-- Optional JavaScript; choose one of the two! -->
+    <script src="../js/database.js"></script>
     <script src="../js/print.js"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
