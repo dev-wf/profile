@@ -128,7 +128,8 @@
                             </div>
                         </div>
                         <br>
-                        <div id="btnPrint" class="container  text-center fw-bold justify-content-center">
+                        <div id="btnPrint" onclick="swit()//printDoc('PrintArea')"
+                            class="container  text-center fw-bold justify-content-center">
                             <a class="neon-bt  shadow-lg btn-secondary text-black">
                                 <span></span>
                                 <span></span>
@@ -145,14 +146,33 @@
         </section>
         <br>
         <br>
-        <div class="container p-5 bg-light rounded-3 text-center text-break ">
-            <div id="getValor">getValor</div>
-            <div id="getPagador">getPagador</div>
-            <div id="getDocPagador">getDocPagador</div>
-            <div id="getRef">getRef</div>
-            <div id="getEmissor">getEmissor</div>
-            <div id="getValorDocEmissor">getValorDocEmissor</div>
-            <div id="getData">getData</div>
+        <div id="PrintArea" class="container p-5 bg-light rounded-3 text-center text-break ">
+            <div class="table-div m-t-20">
+                <div class="columns">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-size-5 has-text-centered">Recibo de Pagamento</h1>
+                        <div id="getValor">getValor</div>
+                        <div id="getPagador">getPagador</div>
+                        <div id="getDocPagador">getDocPagador</div>
+                        <div id="getRef">getRef</div>
+                        <div id="getEmissor">getEmissor</div>
+                        <div id="getValorDocEmissor">getValorDocEmissor</div>
+                        <div id="getData">getData</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="btnPrint" onclick="printDoc('PrintArea')"
+            class="container  text-center fw-bold justify-content-center">
+            <a class="neon-bt  shadow-lg btn-secondary text-black">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                IMPRIMIR
+            </a>
+            <br>
+
         </div>
         <br>
         <br>

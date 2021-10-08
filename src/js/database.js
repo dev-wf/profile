@@ -13,11 +13,11 @@ function submit() {
 }
 
 function swit() {
-    getValor = document.getElementById('valor').value;
+    valor = document.getElementById('valor').value;
     //document.getElementById('setValor').innerText = getValor;
-    setValor = document.getElementById('formatar').innerHTML
-    console.log(setValor);
-    document.getElementById()
+    console.log(valor);
+    document.getElementById('getValor').innerHTML = valor;
+
 
 
 
