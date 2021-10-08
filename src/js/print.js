@@ -113,6 +113,7 @@ function cpfCnpj(v) {
         //Coloca um hífen depois do bloco de quatro dígitos
         v = v.replace(/(\d{4})(\d)/, "$1-$2")
 
+        
     }
 
     return v
