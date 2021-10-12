@@ -91,7 +91,7 @@
                                         <div class="control">
                                             <input class="input" placeholder="Descrição do pagamento" name="referente"
                                                 required id="referente" type="text">
-                                                
+
                                         </div>
                                     </div>
 
@@ -105,11 +105,12 @@
                                                 </div>
                                             </div>
                                             <div class="column is-4">
-                                                <label for="cpfcnpj1"  class="label">CPF ou CNPJ
+                                                <label for="cpfcnpj1" class="label">CPF ou CNPJ
                                                     (opcional):</label>
                                                 <div class="control">
-                                                    <input class="input " onkeypress='mascaraMutuario(this,cpfCnpj)' name="cpfcnpj1"
-                                                        placeholder="00.000.000/0001-00" id="cpfcnpj1" type="text">
+                                                    <input class="input " onkeypress='mascaraMutuario(this,cpfCnpj)'
+                                                        name="cpfcnpj1" placeholder="00.000.000/0001-00" id="cpfcnpj1"
+                                                        type="text">
                                                 </div>
                                                 <p class="help">Somente números</p>
                                             </div>
@@ -131,7 +132,8 @@
                         <br>
                         <div id="btnPrint" onclick="swit()//printDoc('PrintArea')"
                             class="container  text-center fw-bold justify-content-center">
-                            <a class="neon-bt  shadow-lg btn-secondary text-black">
+                            <a data-bs-toggle="modal" data-bs-target="#reciboPrint"
+                                class="neon-bt  shadow-lg btn-secondary text-black">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -147,94 +149,100 @@
         </section>
         <br>
         <br>
-        <div id="PrintArea" class="container p-5 bg-light rounded-3 text-center text-break ">
-            <div class="table-div m-t-20">
-                <div class="columns">
-                    <div class="column has-text-centered">
-                        <h1 class="title is-size-5 has-text-centered">Recibo de Pagamento</h1>
-
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column has-text-left"><b class=""></b></div>
-                    <div class="column has-text-right"><span>R$:</span> <b class="borda-preco" id="getValor">00,000</b>
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column recibo-p">
-                        <p>Recebi(emos) de <b id="getPagador">PAGADOR</b> - CPF/CNPJ nº <b
-                                id="getDocPagador">00.0000.000-000</b>, referente à <b id="getRef">REFERENTE</b>.</p>
-                        <p>Para maior clareza firmo(amos) o presente recibo para que produza os seus efeitos, dando
-                            plena, rasa e irrevogável quitação, pelo valor recebido.</p>
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <p class="has-text-right" id="getData">DATA</p>
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column has-text-centered">
-                        <span class="borda-assinatura">
-                            <p id="getEmissor">EMISSOR</p>
-                        </span>
-                        <p  id="getValorDocEmissor">000.000.00.0./00</p>
-                        <p></p>
-
-
-
-
-
-                        <!-- VARIAVEIS
-                        <span>VALOR:</span>
-                        <div id="getValor">getValor</div>
-                        <span>PAGADOR:</span>
-                        <div id="getPagador">getPagador</div>
-                        <span>DOC PAGADOR:</span>
-                        <div id="getDocPagador">getDocPagador</div>
-                        <span>REFERENTE:</span>
-                        <div id="getRef">getRef</div>
-                        <span>EMISSOR:</span>
-                        <div id="getEmissor">getEmissor</div>
-                        <span>DOC EMISSOR:</span>
-                        <div id="getValorDocEmissor">getValorDocEmissor</div>
-                        <span>DATA:</span>
-                        <div id="getData">getData</div>
-                         -->    
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="btnPrint" onclick="printDoc('PrintArea')"
-            class="container  text-center fw-bold justify-content-center">
-            <a class="neon-bt  shadow-lg btn-secondary text-black">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                IMPRIMIR
-            </a>
-            <br>
-
-        </div>
-        <br>
-        <br>
-
-
-
-
-
-
-
-
 
 
 
     </div>
 
 
+    <!-- Modal -->
+    <div class="modal fade" id="reciboPrint" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">RECIBO GERADO..</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="PrintArea" class="container p-5 bg-light rounded-3 text-center text-break ">
+                        <div class="table-div m-t-20">
+                            <div class="columns">
+                                <div class="column has-text-centered">
+                                    <h1 class="title is-size-5 has-text-centered">Recibo de Pagamento</h1>
+
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column has-text-left"><b class=""></b></div>
+                                <div class="column has-text-right"><span>R$:</span> <b class="borda-preco"
+                                        id="getValor">00,000</b>
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column recibo-p">
+                                    <p>Recebi(emos) de <b id="getPagador">PAGADOR</b> - CPF/CNPJ nº <b
+                                            id="getDocPagador">00.0000.000-000</b>, referente à <b
+                                            id="getRef">REFERENTE</b>.</p>
+                                    <p>Para maior clareza firmo(amos) o presente recibo para que produza os seus
+                                        efeitos, dando
+                                        plena, rasa e irrevogável quitação, pelo valor recebido.</p>
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column">
+                                    <p class="has-text-right" id="getData">DATA</p>
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column has-text-centered">
+                                    <span class="borda-assinatura">
+                                        <p id="getEmissor">EMISSOR</p>
+                                    </span>
+                                    <p id="getValorDocEmissor">000.000.00.0./00</p>
+                                    <p></p>
 
 
+                                    <!-- VARIAVEIS
+                                    <span>VALOR:</span>
+                                    <div id="getValor">getValor</div>
+                                    <span>PAGADOR:</span>
+                                    <div id="getPagador">getPagador</div>
+                                    <span>DOC PAGADOR:</span>
+                                    <div id="getDocPagador">getDocPagador</div>
+                                    <span>REFERENTE:</span>
+                                    <div id="getRef">getRef</div>
+                                    <span>EMISSOR:</span>
+                                    <div id="getEmissor">getEmissor</div>
+                                    <span>DOC EMISSOR:</span>
+                                    <div id="getValorDocEmissor">getValorDocEmissor</div>
+                                    <span>DATA:</span>
+                                    <div id="getData">getData</div>
+                                     -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                </div>
+                <div class="modal-footer">
+                    <div id="btnPrint" onclick="printDoc('PrintArea')"
+                        class="container  text-center fw-bold justify-content-center">
+                        <a class="neon-bt  shadow-lg btn-secondary text-black">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            IMPRIMIR
+                        </a>
+                        <br>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">VOLTAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
