@@ -40,10 +40,18 @@ function swit() {
     console.log(valor);
     document.getElementById('getEmissor').innerHTML = emissor;
 
+    if (emissor = document.getElementById('emissor').value === "") {
+        document.getElementById('getEmissor').innerHTML = "WF TECH"
+    }
+
     //cpfcnpj1:
     cpfcnpj1 = document.getElementById('cpfcnpj1').value;
     console.log(cpfcnpj1);
     document.getElementById('getValorDocEmissor').innerHTML = cpfcnpj1;
+
+    if (cpfcnpj1 = document.getElementById('cpfcnpj1').value === "") {
+        document.getElementById('getValorDocEmissor').innerHTML = "43.652.172/0001-52";
+    }
 
     //data:
     data = document.getElementById('data').value;
