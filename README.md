@@ -4,7 +4,7 @@
 <div align="center">
 
 
- Autor: Welington Fernandes</b></sub></a> <a href="https://github.com/dev-wf" title="CodWF">🚀</a>
+ Autor: <a href="https://github.com/dev-wf" title="CodWF"> Welington Fernandes</b> 🚀</a>
 
 Feito com ❤️ por Welington Fernandes 👋🏽
 </div>
